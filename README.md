@@ -27,8 +27,9 @@ Recent fixes:
 ### Known issues
 
 - Occasional vertex artifacts on skinned wrestler models (under investigation upstream in RexGlue)
-- Resolution and aspect ratio are currently locked to the 360 defaults
+- Internal game resolution and aspect ratio are currently locked to the 360 defaults; the recomp's renderer supports output at up to 4× internal resolution (4K) on capable hardware. Arbitrary internal resolution and aspect ratio support is on the roadmap.
 - Some indirect PPC calls still fall through to a generic dispatcher (`PPC_CALL_INDIRECT_FUNC`) — being squashed over time
+- Roughly a 10% chance per session of a random crash where the host GPU device is lost (D3D12 device-removed / disconnect). Cause not yet root-caused; relaunch the game to recover.
 
 ---
 
@@ -44,7 +45,7 @@ A USA/Canada disc is recommended. Region-free or other regional releases are unt
 
 ## Installation
 
-1. Download the latest `svr07.exe` from the [Releases page](https://github.com/HollywoodAkeem/SVR07-Recomp/tags).
+1. Download the latest `svr07.exe` from the [Releases page](https://github.com/HollywoodAkeem/SVR07-Recomp/releases).
 2. Rip your own copy of *WWE SmackDown vs. Raw 2007* and extract its files.
 3. Set up the directory layout below.
 

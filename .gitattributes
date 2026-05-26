@@ -1,0 +1,6 @@
+# Normalize line endings so contributors on Windows and Linux don't trip
+# CRLF/LF diffs against each other. Text files stored as LF in the repo;
+# .bat/.cmd kept CRLF so they actually run on Windows.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
