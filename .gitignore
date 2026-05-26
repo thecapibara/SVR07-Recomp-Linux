@@ -8,3 +8,23 @@ assets/
 Testing/
 isenseconfig/
 decode_func.py
+
+# CMake / build artifacts
+CMakeFiles/
+build/
+cmake_install.cmake
+CMakeCache.txt
+*.obj
+*.bin
+
+# Compiled object outputs — release exes belong on the Releases page, not in
+# the tree. Scope kept narrow so a deliberate `git add -f svr07.exe` still
+# works if you ever need to stage one for a tag.
+CMakeFiles/**/*.exe
+out/**/*.exe
+out/**/*.lib
+out/**/*.pdb
+
+# Visual Studio user-specific files
+*.user
+*.suo
