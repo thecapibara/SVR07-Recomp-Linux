@@ -25,11 +25,12 @@ class Svr07App : public rex::ReXApp {
     paths.update_data_root =
         std::filesystem::path(R"(\assets\1_update)");
 
-    //paths.cahce_data_root =
-      //std::filesystem::path(R"(C:\Users\joelu\source\repos\svr07\out\build\win-amd64-debug\assets\1_cache)");
+    // Optional: point cache to a custom directory.
+    // paths.cache_data_root =
+    //   std::filesystem::path(R"(path\to\your\cache\folder)");
 
     // Optional: keep user data wherever you already want it.
-    // paths.user_data_root = std::filesystem::path(R"(J:\Documents\wwe2k14)");
+    // paths.user_data_root = std::filesystem::path(R"(path\to\your\user\data)");
   }
 
   // Override virtual hooks for customization:
