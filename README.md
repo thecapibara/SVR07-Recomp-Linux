@@ -1,10 +1,14 @@
+<p align="center">
+  <img src="docs/images/logo.png" alt="WWE SmackDown vs. Raw 2007 — reCompiled" width="640">
+</p>
+
 # SVR07-Recomp
 
 A static recompilation of **WWE SmackDown vs. Raw 2007** (Xbox 360) that runs natively on Windows.
 
 Built on top of [RexGlue](https://github.com/HollywoodAkeem/rexglue-sdk-yukes), an Xbox 360 PPC-to-x64 recompilation runtime.
 
-[Demo video](https://www.youtube.com/watch?v=iTuGEyXiP64)
+▶ [Reveal trailer](https://youtu.be/ozP0BlBFnlI) · [Earlier demo](https://www.youtube.com/watch?v=iTuGEyXiP64)
 
 ---
 
@@ -127,7 +131,7 @@ The code is open source specifically so others can take the project in direction
 PRs and issues are welcome. A few notes:
 
 - Keep discussion in GitHub issues where possible — it indexes on Google and helps the next person searching for the same problem.
-- For broader chat there's a [Discord](https://discord.gg/vsBPjGVW), but please post anything substantive here too.
+- For broader chat there's a [Discord](https://discord.gg/EtUD6D6Sct), but please post anything substantive here too.
 - If you're touching RexGlue itself, the relevant fork is [rexglue-sdk-yukes](https://github.com/HollywoodAkeem/rexglue-sdk-yukes).
 
 ---
