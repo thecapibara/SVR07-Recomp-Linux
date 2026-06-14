@@ -62,16 +62,16 @@ Recent fixes:
 ### Linux
 1. Download the latest `svr07` binary (without extension) from the [Releases page](https://github.com/thecapibara/SVR07-Recomp-Linux/releases).
 2. Rip your own copy of *WWE SmackDown vs. Raw 2007* and extract its files.
-3. Make the binary executable and run it:
+3. Run the game using the launcher script:
    ```bash
-   chmod +x svr07
-   ./svr07 ./assets
+   ./run.sh
    ```
 
 ### Directory Layout
 ```
 svr07/
 ├── svr07 (or svr07.exe)
+├── run.sh
 └── assets/
     └── [extracted WWE SVR 2007 files]
 ```
@@ -141,7 +141,7 @@ sudo apt install clang cmake ninja-build libpipewire-0.3-dev libasound2-dev libp
    ```
 3. Run the game:
    ```bash
-   ./out/build/linux-amd64-release/svr07 ./assets
+   ./run.sh
    ```
 
 Available presets for Linux: `linux-amd64-debug`, `linux-amd64-relwithdebinfo`, `linux-amd64-release`.
