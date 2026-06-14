@@ -28,3 +28,6 @@ out/**/*.pdb
 # Visual Studio user-specific files
 *.user
 *.suo
+
+# Local SDK
+rexglue-sdk/
