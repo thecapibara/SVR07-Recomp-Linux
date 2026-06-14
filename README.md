@@ -39,28 +39,42 @@ Recent fixes:
 
 ## Requirements
 
-- **Windows 10 or 11 (x64)**
-- **DirectX 12 capable GPU** (driver must support D3D12)
-- **A legally-owned retail copy of WWE SmackDown vs. Raw 2007 for Xbox 360.** This project does **not** distribute any game assets — you must supply your own.
-
-A USA/Canada disc is recommended. Region-free or other regional releases are untested and may not work.
+- **Operating System**: 
+  - **Windows 10 or 11 (x64)**
+  - **Linux (x64)** (tested on Fedora 44, compatible with major distributions)
+- **Graphics API / GPU**:
+  - Windows: **DirectX 12 capable GPU** (driver must support D3D12)
+  - Linux: **Vulkan capable GPU** (driver must support Vulkan 1.3+)
+- **Game Files**:
+  - **A legally-owned retail copy of WWE SmackDown vs. Raw 2007 for Xbox 360.** This project does **not** distribute any game assets — you must supply your own.
+  - A USA/Canada disc is recommended. Region-free or other regional releases are untested and may not work.
 
 ---
 
 ## Installation
 
-1. Download the latest `svr07.exe` from the [Releases page](https://github.com/HollywoodAkeem/SVR07-Recomp/releases).
+### Windows
+1. Download the latest `svr07.exe` from the [Releases page](https://github.com/thecapibara/SVR07-Recomp-Linux/releases).
 2. Rip your own copy of *WWE SmackDown vs. Raw 2007* and extract its files.
 3. Set up the directory layout below.
+4. Run `svr07.exe`.
 
+### Linux
+1. Download the latest `svr07` binary (without extension) from the [Releases page](https://github.com/thecapibara/SVR07-Recomp-Linux/releases).
+2. Rip your own copy of *WWE SmackDown vs. Raw 2007* and extract its files.
+3. Make the binary executable and run it:
+   ```bash
+   chmod +x svr07
+   ./svr07 ./assets
+   ```
+
+### Directory Layout
 ```
 svr07/
-├── svr07.exe
+├── svr07 (or svr07.exe)
 └── assets/
     └── [extracted WWE SVR 2007 files]
 ```
-
-4. Run `svr07.exe`.
 
 ---
 
@@ -68,44 +82,69 @@ svr07/
 
 This is involved. If you just want to play, grab the release binary instead.
 
-### Prerequisites
+### Windows
 
+#### Prerequisites
 - Visual Studio 2022 (with Desktop C++ workload)
 - CMake 3.25+ (the version bundled with VS2022 works)
 - Ninja (also bundled with VS2022)
 - clang-cl from the LLVM toolchain bundled with VS2022
 
-### Steps
-
+#### Steps
 1. Clone this repo and the matching RexGlue fork side by side:
-
    ```bash
-   git clone https://github.com/HollywoodAkeem/SVR07-Recomp.git svr07
+   git clone https://github.com/thecapibara/SVR07-Recomp-Linux.git svr07
    git clone https://github.com/HollywoodAkeem/rexglue-sdk-yukes.git rexglue-sdk
    ```
-
    You **must** use the `rexglue-sdk-yukes` fork — upstream RexGlue is missing fixes this game depends on.
-
 2. Configure and build RexGlue first, then run its install step. SVR07-Recomp links against the installed RexGlue artifacts.
-
    ```bash
    cd rexglue-sdk
    cmake --preset win-amd64-relwithdebinfo
    cmake --build --preset win-amd64-relwithdebinfo
    cmake --install build/win-amd64-relwithdebinfo
    ```
-
 3. Configure and build SVR07-Recomp:
-
    ```bash
    cd ../svr07
    cmake --preset win-amd64-relwithdebinfo
    cmake --build --preset win-amd64-relwithdebinfo
    ```
-
 4. The output binary will land in `out/build/win-amd64-relwithdebinfo/`.
 
-Available presets: `win-amd64-debug`, `win-amd64-relwithdebinfo`, `win-amd64-release`.
+---
+
+### Linux
+
+#### Prerequisites
+Install the required build tools, compiler (clang), CMake, Ninja, and development headers for your audio backends (PipeWire/ALSA/PulseAudio).
+
+On Fedora:
+```bash
+sudo dnf install clang cmake ninja-build pipewire-devel alsa-lib-devel pulseaudio-libs-devel
+```
+On Ubuntu/Debian:
+```bash
+sudo apt install clang cmake ninja-build libpipewire-0.3-dev libasound2-dev libpulse-dev
+```
+
+#### Steps
+1. Clone this repository recursively (so `rexglue-sdk` is included):
+   ```bash
+   git clone --recursive https://github.com/thecapibara/SVR07-Recomp-Linux.git SVR07-Recomp-Linux
+   cd SVR07-Recomp-Linux
+   ```
+2. Configure and build the project (this automatically builds `rexglue-sdk` locally within the project):
+   ```bash
+   cmake --preset linux-amd64-release
+   cmake --build --preset linux-amd64-release
+   ```
+3. Run the game:
+   ```bash
+   ./out/build/linux-amd64-release/svr07 ./assets
+   ```
+
+Available presets for Linux: `linux-amd64-debug`, `linux-amd64-relwithdebinfo`, `linux-amd64-release`.
 
 ---
 
