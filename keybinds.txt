@@ -1,0 +1,48 @@
+========================================================================
+           WWE SmackDown! vs. Raw 2007 (Recomp) Keyboard Controls
+========================================================================
+
+This file documents the default ergonomic keyboard layout for playing 
+WWE SmackDown! vs. Raw 2007 on Linux. 
+
+The controls are split between Left Hand (movement & modifiers/reversals) 
+and Right Hand (actions & grapple stick), providing a comfortable layout.
+
+------------------------------------------------------------------------
+1. GENERAL CONTROLS
+------------------------------------------------------------------------
+Movement (Left Stick)   : W, A, S, D
+Grapples & Pins (RS)    : I, J, K, L
+  - I                   : Right Stick Up (Quick Grapple)
+  - K                   : Right Stick Down (Pin Opponent / Quick Grapple)
+  - J                   : Right Stick Left (Quick Grapple)
+  - L                   : Right Stick Right (Quick Grapple)
+Taunts (D-pad)          : 1, 2, 3, 4
+Pause Menu (Start)      : Escape
+Change Target (Back)    : Tab
+
+------------------------------------------------------------------------
+2. ACTION BUTTONS
+------------------------------------------------------------------------
+Enter/Exit Ring (A)     : Space
+Pick Up/Search Weapon (A): Space
+Strikes (X)             : U
+Run (Y)                 : O
+Back/Cancel (B)         : N
+Perform Finisher (LB)   : E
+Grapple Modifier (RB)   : Left Shift
+Reverse Strike (LT)     : Q
+Reverse Grapple (RT)    : F
+
+------------------------------------------------------------------------
+3. WRESTLING COMBINATIONS
+------------------------------------------------------------------------
+Pin Opponent            : K
+Irish Whip              : Hold Left Shift + Space
+Reverse Finisher        : Q + F (LT + RT)
+Clean/Dirty Grapples    : Hold Left Shift + I
+Submission Grapples     : Hold Left Shift + K
+Category 1 Grapples     : Hold Left Shift + J
+Category 2 Grapples     : Hold Left Shift + L
+
+========================================================================
